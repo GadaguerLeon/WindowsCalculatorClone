@@ -60,6 +60,7 @@ namespace Calculator {
 	private: System::Windows::Forms::Button^ zero_btn;
 	private: System::Windows::Forms::Button^ decimal_btn;
 	private: System::Windows::Forms::Button^ equals_btn;
+	private: System::Windows::Forms::Label^ StandardLabel;
 	protected:
 
 	protected:
@@ -127,11 +128,12 @@ namespace Calculator {
 			this->zero_btn = (gcnew System::Windows::Forms::Button());
 			this->decimal_btn = (gcnew System::Windows::Forms::Button());
 			this->equals_btn = (gcnew System::Windows::Forms::Button());
+			this->StandardLabel = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// numdisplay_txt
 			// 
-			this->numdisplay_txt->BackColor = System::Drawing::Color::White;
+			this->numdisplay_txt->BackColor = System::Drawing::SystemColors::Control;
 			this->numdisplay_txt->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->numdisplay_txt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -144,6 +146,8 @@ namespace Calculator {
 			// 
 			// modulus_btn
 			// 
+			this->modulus_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->modulus_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->modulus_btn->Location = System::Drawing::Point(2, 169);
@@ -151,11 +155,13 @@ namespace Calculator {
 			this->modulus_btn->Size = System::Drawing::Size(98, 63);
 			this->modulus_btn->TabIndex = 1;
 			this->modulus_btn->Text = L"%";
-			this->modulus_btn->UseVisualStyleBackColor = true;
+			this->modulus_btn->UseVisualStyleBackColor = false;
 			this->modulus_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// ce_btn
 			// 
+			this->ce_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->ce_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ce_btn->Location = System::Drawing::Point(106, 169);
@@ -163,10 +169,13 @@ namespace Calculator {
 			this->ce_btn->Size = System::Drawing::Size(98, 63);
 			this->ce_btn->TabIndex = 1;
 			this->ce_btn->Text = L"CE";
-			this->ce_btn->UseVisualStyleBackColor = true;
+			this->ce_btn->UseVisualStyleBackColor = false;
+			this->ce_btn->Click += gcnew System::EventHandler(this, &StandardCalc::ce_btn_Click);
 			// 
 			// c_btn
 			// 
+			this->c_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->c_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->c_btn->Location = System::Drawing::Point(210, 169);
@@ -174,11 +183,13 @@ namespace Calculator {
 			this->c_btn->Size = System::Drawing::Size(98, 63);
 			this->c_btn->TabIndex = 1;
 			this->c_btn->Text = L"C";
-			this->c_btn->UseVisualStyleBackColor = true;
+			this->c_btn->UseVisualStyleBackColor = false;
 			this->c_btn->Click += gcnew System::EventHandler(this, &StandardCalc::c_btn_Click);
 			// 
 			// back_btn
 			// 
+			this->back_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->back_btn->Font = (gcnew System::Drawing::Font(L"Wingdings", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(2)));
 			this->back_btn->Location = System::Drawing::Point(314, 169);
@@ -186,10 +197,13 @@ namespace Calculator {
 			this->back_btn->Size = System::Drawing::Size(98, 63);
 			this->back_btn->TabIndex = 1;
 			this->back_btn->Text = L"";
-			this->back_btn->UseVisualStyleBackColor = true;
+			this->back_btn->UseVisualStyleBackColor = false;
+			this->back_btn->Click += gcnew System::EventHandler(this, &StandardCalc::back_btn_Click);
 			// 
 			// oneoverx_btn
 			// 
+			this->oneoverx_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->oneoverx_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->oneoverx_btn->Location = System::Drawing::Point(2, 238);
@@ -197,11 +211,13 @@ namespace Calculator {
 			this->oneoverx_btn->Size = System::Drawing::Size(98, 63);
 			this->oneoverx_btn->TabIndex = 1;
 			this->oneoverx_btn->Text = L"1/x";
-			this->oneoverx_btn->UseVisualStyleBackColor = true;
+			this->oneoverx_btn->UseVisualStyleBackColor = false;
 			this->oneoverx_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// xsqrd_btn
 			// 
+			this->xsqrd_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->xsqrd_btn->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->xsqrd_btn->Location = System::Drawing::Point(106, 238);
@@ -209,11 +225,13 @@ namespace Calculator {
 			this->xsqrd_btn->Size = System::Drawing::Size(98, 63);
 			this->xsqrd_btn->TabIndex = 1;
 			this->xsqrd_btn->Text = L"x^2";
-			this->xsqrd_btn->UseVisualStyleBackColor = true;
+			this->xsqrd_btn->UseVisualStyleBackColor = false;
 			this->xsqrd_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// sqrroot_btn
 			// 
+			this->sqrroot_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->sqrroot_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->sqrroot_btn->Location = System::Drawing::Point(210, 238);
@@ -221,11 +239,13 @@ namespace Calculator {
 			this->sqrroot_btn->Size = System::Drawing::Size(98, 63);
 			this->sqrroot_btn->TabIndex = 1;
 			this->sqrroot_btn->Text = L"√";
-			this->sqrroot_btn->UseVisualStyleBackColor = true;
+			this->sqrroot_btn->UseVisualStyleBackColor = false;
 			this->sqrroot_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// divide_btn
 			// 
+			this->divide_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->divide_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->divide_btn->Location = System::Drawing::Point(314, 238);
@@ -233,7 +253,7 @@ namespace Calculator {
 			this->divide_btn->Size = System::Drawing::Size(98, 63);
 			this->divide_btn->TabIndex = 1;
 			this->divide_btn->Text = L"÷";
-			this->divide_btn->UseVisualStyleBackColor = true;
+			this->divide_btn->UseVisualStyleBackColor = false;
 			this->divide_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// seven_btn
@@ -274,6 +294,8 @@ namespace Calculator {
 			// 
 			// multiply_btn
 			// 
+			this->multiply_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->multiply_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->multiply_btn->Location = System::Drawing::Point(314, 307);
@@ -281,7 +303,7 @@ namespace Calculator {
 			this->multiply_btn->Size = System::Drawing::Size(98, 63);
 			this->multiply_btn->TabIndex = 1;
 			this->multiply_btn->Text = L"X";
-			this->multiply_btn->UseVisualStyleBackColor = true;
+			this->multiply_btn->UseVisualStyleBackColor = false;
 			this->multiply_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// four_btn
@@ -322,6 +344,8 @@ namespace Calculator {
 			// 
 			// subtract_btn
 			// 
+			this->subtract_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->subtract_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->subtract_btn->Location = System::Drawing::Point(314, 376);
@@ -329,7 +353,7 @@ namespace Calculator {
 			this->subtract_btn->Size = System::Drawing::Size(98, 63);
 			this->subtract_btn->TabIndex = 1;
 			this->subtract_btn->Text = L"-";
-			this->subtract_btn->UseVisualStyleBackColor = true;
+			this->subtract_btn->UseVisualStyleBackColor = false;
 			this->subtract_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// one_btn
@@ -370,6 +394,8 @@ namespace Calculator {
 			// 
 			// add_btn
 			// 
+			this->add_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->add_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->add_btn->Location = System::Drawing::Point(314, 445);
@@ -377,7 +403,7 @@ namespace Calculator {
 			this->add_btn->Size = System::Drawing::Size(98, 63);
 			this->add_btn->TabIndex = 1;
 			this->add_btn->Text = L"+";
-			this->add_btn->UseVisualStyleBackColor = true;
+			this->add_btn->UseVisualStyleBackColor = false;
 			this->add_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// pos_neg_btn
@@ -390,6 +416,7 @@ namespace Calculator {
 			this->pos_neg_btn->TabIndex = 1;
 			this->pos_neg_btn->Text = L"+/-";
 			this->pos_neg_btn->UseVisualStyleBackColor = true;
+			this->pos_neg_btn->Click += gcnew System::EventHandler(this, &StandardCalc::pos_neg_btn_Click);
 			// 
 			// zero_btn
 			// 
@@ -427,11 +454,23 @@ namespace Calculator {
 			this->equals_btn->UseVisualStyleBackColor = true;
 			this->equals_btn->Click += gcnew System::EventHandler(this, &StandardCalc::equals_btn_Click);
 			// 
+			// StandardLabel
+			// 
+			this->StandardLabel->AutoSize = true;
+			this->StandardLabel->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->StandardLabel->Location = System::Drawing::Point(36, 13);
+			this->StandardLabel->Name = L"StandardLabel";
+			this->StandardLabel->Size = System::Drawing::Size(99, 26);
+			this->StandardLabel->TabIndex = 2;
+			this->StandardLabel->Text = L"Standard";
+			// 
 			// StandardCalc
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(417, 582);
+			this->Controls->Add(this->StandardLabel);
 			this->Controls->Add(this->equals_btn);
 			this->Controls->Add(this->add_btn);
 			this->Controls->Add(this->subtract_btn);
@@ -508,7 +547,7 @@ private: System::Void equals_btn_Click(System::Object^ sender, System::EventArgs
 		result = first_digit - second_digit;
 		numdisplay_txt->Text = System::Convert::ToString(result);
 	}
-	else if (operators == "x") {
+	else if (operators == "X") {
 		result = first_digit * second_digit;
 		numdisplay_txt->Text = System::Convert::ToString(result);
 	}
@@ -521,10 +560,11 @@ private: System::Void equals_btn_Click(System::Object^ sender, System::EventArgs
 		numdisplay_txt->Text = System::Convert::ToString(result);
 	}
 	else if (operators == "x^2") {
-		result = pow(first_digit, second_digit);
+		result = pow(first_digit, 2);
 		numdisplay_txt->Text = System::Convert::ToString(result);
 	}
 	else if (operators == "1/x") {
+		second_digit = 1;
 		result = 1 / first_digit;
 		numdisplay_txt->Text = System::Convert::ToString(result);
 	}
@@ -536,6 +576,29 @@ private: System::Void equals_btn_Click(System::Object^ sender, System::EventArgs
 	}
 }
 private: System::Void c_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+	numdisplay_txt->Text = "0";
+}
+private: System::Void ce_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+	numdisplay_txt->Text = "0";
+}
+private: System::Void pos_neg_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	if (numdisplay_txt->Text->Contains("-")) {
+		numdisplay_txt->Text = numdisplay_txt->Text->Remove(0, 1);
+	}
+	else {
+		numdisplay_txt->Text = "-" + numdisplay_txt->Text;
+	}
+}
+private: System::Void back_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	if (numdisplay_txt->Text->Length > 0) {
+		numdisplay_txt->Text = numdisplay_txt->Text->Remove(numdisplay_txt->Text->Length - 1, 1);
+	}
+	else if (numdisplay_txt->Text == ""){
+		numdisplay_txt->Text = "0";
+	}
+
 }
 };
 }
