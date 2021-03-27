@@ -537,42 +537,46 @@ private: System::Void decimal_btn_Click(System::Object^ sender, System::EventArg
 	}
 }
 private: System::Void equals_btn_Click(System::Object^ sender, System::EventArgs^ e) {
-	second_digit = Double::Parse(numdisplay_txt->Text);
-
-	if (operators == "+") {
-		result = first_digit + second_digit;
-		numdisplay_txt->Text = System::Convert::ToString(result);
-	}
-	else if (operators == "-") {
-		result = first_digit - second_digit;
-		numdisplay_txt->Text = System::Convert::ToString(result);
-	}
-	else if (operators == "X") {
-		result = first_digit * second_digit;
-		numdisplay_txt->Text = System::Convert::ToString(result);
-	}
-	else if (operators == "÷"){
-		result = first_digit / second_digit;
-		numdisplay_txt->Text = System::Convert::ToString(result);
-	}
-	else if (operators == "√") {
-		result = sqrt(first_digit);
+	
+	if (operators == "1/x") {
+		result = 1 / first_digit;
 		numdisplay_txt->Text = System::Convert::ToString(result);
 	}
 	else if (operators == "x^2") {
 		result = pow(first_digit, 2);
 		numdisplay_txt->Text = System::Convert::ToString(result);
 	}
-	else if (operators == "1/x") {
-		second_digit = 1;
-		result = 1 / first_digit;
+	// TODO: Figure out why the conditional statement can't detect the "√" character.  
+	/*else if (operators == "√") {
+		result = sqrt(first_digit);
 		numdisplay_txt->Text = System::Convert::ToString(result);
-	}
-	else if (operators == "%") {
-		int first_digit_f = floor(first_digit);
-		int second_digit_f = floor(second_digit);
-		result = first_digit_f % second_digit_f;
-		numdisplay_txt->Text = System::Convert::ToString(result);
+	}*/
+	else {
+
+		second_digit = Double::Parse(numdisplay_txt->Text);
+
+		if (operators == "+") {
+			result = first_digit + second_digit;
+			numdisplay_txt->Text = System::Convert::ToString(result);
+		}
+		else if (operators == "-") {
+			result = first_digit - second_digit;
+			numdisplay_txt->Text = System::Convert::ToString(result);
+		}
+		else if (operators == "X") {
+			result = first_digit * second_digit;
+			numdisplay_txt->Text = System::Convert::ToString(result);
+		}
+		else if (operators == "÷") {
+			result = first_digit / second_digit;
+			numdisplay_txt->Text = System::Convert::ToString(result);
+		}
+		else if (operators == "%") {
+			int first_digit_f = floor(first_digit);
+			int second_digit_f = floor(second_digit);
+			result = first_digit_f % second_digit_f;
+			numdisplay_txt->Text = System::Convert::ToString(result);
+		}
 	}
 }
 private: System::Void c_btn_Click(System::Object^ sender, System::EventArgs^ e) {
