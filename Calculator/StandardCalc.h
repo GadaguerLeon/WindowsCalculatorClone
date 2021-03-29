@@ -41,8 +41,9 @@ namespace Calculator {
 	private: System::Windows::Forms::Button^ back_btn;
 	private: System::Windows::Forms::Button^ oneoverx_btn;
 	private: System::Windows::Forms::Button^ xsqrd_btn;
+	private: System::Windows::Forms::Button^ sqrt_btn;
 
-	private: System::Windows::Forms::Button^ sqrroot_btn;
+
 	private: System::Windows::Forms::Button^ divide_btn;
 	private: System::Windows::Forms::Button^ seven_btn;
 	private: System::Windows::Forms::Button^ eight_btn;
@@ -110,7 +111,7 @@ namespace Calculator {
 			this->back_btn = (gcnew System::Windows::Forms::Button());
 			this->oneoverx_btn = (gcnew System::Windows::Forms::Button());
 			this->xsqrd_btn = (gcnew System::Windows::Forms::Button());
-			this->sqrroot_btn = (gcnew System::Windows::Forms::Button());
+			this->sqrt_btn = (gcnew System::Windows::Forms::Button());
 			this->divide_btn = (gcnew System::Windows::Forms::Button());
 			this->seven_btn = (gcnew System::Windows::Forms::Button());
 			this->eight_btn = (gcnew System::Windows::Forms::Button());
@@ -228,19 +229,21 @@ namespace Calculator {
 			this->xsqrd_btn->UseVisualStyleBackColor = false;
 			this->xsqrd_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
-			// sqrroot_btn
+			// sqrt_btn
 			// 
-			this->sqrroot_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+			this->sqrt_btn->AccessibleName = L"sqrt_btn_acc";
+			this->sqrt_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(234)));
-			this->sqrroot_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->sqrt_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->sqrroot_btn->Location = System::Drawing::Point(210, 238);
-			this->sqrroot_btn->Name = L"sqrroot_btn";
-			this->sqrroot_btn->Size = System::Drawing::Size(98, 63);
-			this->sqrroot_btn->TabIndex = 1;
-			this->sqrroot_btn->Text = L"√";
-			this->sqrroot_btn->UseVisualStyleBackColor = false;
-			this->sqrroot_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
+			this->sqrt_btn->Location = System::Drawing::Point(210, 238);
+			this->sqrt_btn->Name = L"sqrt_btn";
+			this->sqrt_btn->Size = System::Drawing::Size(98, 63);
+			this->sqrt_btn->TabIndex = 1;
+			this->sqrt_btn->Tag = L"";
+			this->sqrt_btn->Text = L"√";
+			this->sqrt_btn->UseVisualStyleBackColor = false;
+			this->sqrt_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
 			// 
 			// divide_btn
 			// 
@@ -487,7 +490,7 @@ namespace Calculator {
 			this->Controls->Add(this->pos_neg_btn);
 			this->Controls->Add(this->eight_btn);
 			this->Controls->Add(this->one_btn);
-			this->Controls->Add(this->sqrroot_btn);
+			this->Controls->Add(this->sqrt_btn);
 			this->Controls->Add(this->four_btn);
 			this->Controls->Add(this->xsqrd_btn);
 			this->Controls->Add(this->seven_btn);
@@ -496,6 +499,7 @@ namespace Calculator {
 			this->Controls->Add(this->ce_btn);
 			this->Controls->Add(this->modulus_btn);
 			this->Controls->Add(this->numdisplay_txt);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"StandardCalc";
 			this->Text = L"Calculator";
@@ -545,12 +549,11 @@ private: System::Void equals_btn_Click(System::Object^ sender, System::EventArgs
 	else if (operators == "x^2") {
 		result = pow(first_digit, 2);
 		numdisplay_txt->Text = System::Convert::ToString(result);
-	}
-	// TODO: Figure out why the conditional statement can't detect the "√" character.  
-	/*else if (operators == "√") {
+	} 
+	else if (sqrt_btn) {
 		result = sqrt(first_digit);
 		numdisplay_txt->Text = System::Convert::ToString(result);
-	}*/
+	}
 	else {
 
 		second_digit = Double::Parse(numdisplay_txt->Text);
