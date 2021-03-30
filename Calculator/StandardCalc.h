@@ -532,6 +532,7 @@ private: System::Void EnterOperator(System::Object^ sender, System::EventArgs^ e
 	first_digit = Double::Parse(numdisplay_txt->Text);
 
 	numdisplay_txt->Text = "";
+
 	operators = NumbersOperator->Text;
 }
 private: System::Void decimal_btn_Click(System::Object^ sender, System::EventArgs^ e) {
