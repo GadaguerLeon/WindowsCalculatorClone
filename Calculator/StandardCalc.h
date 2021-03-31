@@ -168,7 +168,7 @@ namespace Calculator {
 			this->ce_btn->Location = System::Drawing::Point(106, 169);
 			this->ce_btn->Name = L"ce_btn";
 			this->ce_btn->Size = System::Drawing::Size(98, 63);
-			this->ce_btn->TabIndex = 1;
+			this->ce_btn->TabIndex = 2;
 			this->ce_btn->Text = L"CE";
 			this->ce_btn->UseVisualStyleBackColor = false;
 			this->ce_btn->Click += gcnew System::EventHandler(this, &StandardCalc::ce_btn_Click);
@@ -182,7 +182,7 @@ namespace Calculator {
 			this->c_btn->Location = System::Drawing::Point(210, 169);
 			this->c_btn->Name = L"c_btn";
 			this->c_btn->Size = System::Drawing::Size(98, 63);
-			this->c_btn->TabIndex = 1;
+			this->c_btn->TabIndex = 3;
 			this->c_btn->Text = L"C";
 			this->c_btn->UseVisualStyleBackColor = false;
 			this->c_btn->Click += gcnew System::EventHandler(this, &StandardCalc::c_btn_Click);
@@ -196,7 +196,7 @@ namespace Calculator {
 			this->back_btn->Location = System::Drawing::Point(314, 169);
 			this->back_btn->Name = L"back_btn";
 			this->back_btn->Size = System::Drawing::Size(98, 63);
-			this->back_btn->TabIndex = 1;
+			this->back_btn->TabIndex = 4;
 			this->back_btn->Text = L"";
 			this->back_btn->UseVisualStyleBackColor = false;
 			this->back_btn->Click += gcnew System::EventHandler(this, &StandardCalc::back_btn_Click);
@@ -210,7 +210,7 @@ namespace Calculator {
 			this->oneoverx_btn->Location = System::Drawing::Point(2, 238);
 			this->oneoverx_btn->Name = L"oneoverx_btn";
 			this->oneoverx_btn->Size = System::Drawing::Size(98, 63);
-			this->oneoverx_btn->TabIndex = 1;
+			this->oneoverx_btn->TabIndex = 5;
 			this->oneoverx_btn->Text = L"1/x";
 			this->oneoverx_btn->UseVisualStyleBackColor = false;
 			this->oneoverx_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
@@ -224,7 +224,7 @@ namespace Calculator {
 			this->xsqrd_btn->Location = System::Drawing::Point(106, 238);
 			this->xsqrd_btn->Name = L"xsqrd_btn";
 			this->xsqrd_btn->Size = System::Drawing::Size(98, 63);
-			this->xsqrd_btn->TabIndex = 1;
+			this->xsqrd_btn->TabIndex = 6;
 			this->xsqrd_btn->Text = L"x^2";
 			this->xsqrd_btn->UseVisualStyleBackColor = false;
 			this->xsqrd_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
@@ -239,7 +239,7 @@ namespace Calculator {
 			this->sqrt_btn->Location = System::Drawing::Point(210, 238);
 			this->sqrt_btn->Name = L"sqrt_btn";
 			this->sqrt_btn->Size = System::Drawing::Size(98, 63);
-			this->sqrt_btn->TabIndex = 1;
+			this->sqrt_btn->TabIndex = 7;
 			this->sqrt_btn->Tag = L"";
 			this->sqrt_btn->Text = L"√";
 			this->sqrt_btn->UseVisualStyleBackColor = false;
@@ -254,7 +254,7 @@ namespace Calculator {
 			this->divide_btn->Location = System::Drawing::Point(314, 238);
 			this->divide_btn->Name = L"divide_btn";
 			this->divide_btn->Size = System::Drawing::Size(98, 63);
-			this->divide_btn->TabIndex = 1;
+			this->divide_btn->TabIndex = 8;
 			this->divide_btn->Text = L"÷";
 			this->divide_btn->UseVisualStyleBackColor = false;
 			this->divide_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
@@ -266,7 +266,7 @@ namespace Calculator {
 			this->seven_btn->Location = System::Drawing::Point(2, 307);
 			this->seven_btn->Name = L"seven_btn";
 			this->seven_btn->Size = System::Drawing::Size(98, 63);
-			this->seven_btn->TabIndex = 1;
+			this->seven_btn->TabIndex = 9;
 			this->seven_btn->Text = L"7";
 			this->seven_btn->UseVisualStyleBackColor = true;
 			this->seven_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -278,7 +278,7 @@ namespace Calculator {
 			this->eight_btn->Location = System::Drawing::Point(106, 307);
 			this->eight_btn->Name = L"eight_btn";
 			this->eight_btn->Size = System::Drawing::Size(98, 63);
-			this->eight_btn->TabIndex = 1;
+			this->eight_btn->TabIndex = 10;
 			this->eight_btn->Text = L"8";
 			this->eight_btn->UseVisualStyleBackColor = true;
 			this->eight_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -290,7 +290,7 @@ namespace Calculator {
 			this->nine_btn->Location = System::Drawing::Point(210, 307);
 			this->nine_btn->Name = L"nine_btn";
 			this->nine_btn->Size = System::Drawing::Size(98, 63);
-			this->nine_btn->TabIndex = 1;
+			this->nine_btn->TabIndex = 11;
 			this->nine_btn->Text = L"9";
 			this->nine_btn->UseVisualStyleBackColor = true;
 			this->nine_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -304,7 +304,7 @@ namespace Calculator {
 			this->multiply_btn->Location = System::Drawing::Point(314, 307);
 			this->multiply_btn->Name = L"multiply_btn";
 			this->multiply_btn->Size = System::Drawing::Size(98, 63);
-			this->multiply_btn->TabIndex = 1;
+			this->multiply_btn->TabIndex = 12;
 			this->multiply_btn->Text = L"X";
 			this->multiply_btn->UseVisualStyleBackColor = false;
 			this->multiply_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
@@ -316,7 +316,7 @@ namespace Calculator {
 			this->four_btn->Location = System::Drawing::Point(2, 376);
 			this->four_btn->Name = L"four_btn";
 			this->four_btn->Size = System::Drawing::Size(98, 63);
-			this->four_btn->TabIndex = 1;
+			this->four_btn->TabIndex = 13;
 			this->four_btn->Text = L"4";
 			this->four_btn->UseVisualStyleBackColor = true;
 			this->four_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -328,7 +328,7 @@ namespace Calculator {
 			this->five_btn->Location = System::Drawing::Point(106, 376);
 			this->five_btn->Name = L"five_btn";
 			this->five_btn->Size = System::Drawing::Size(98, 63);
-			this->five_btn->TabIndex = 1;
+			this->five_btn->TabIndex = 14;
 			this->five_btn->Text = L"5";
 			this->five_btn->UseVisualStyleBackColor = true;
 			this->five_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -340,7 +340,7 @@ namespace Calculator {
 			this->six_btn->Location = System::Drawing::Point(210, 376);
 			this->six_btn->Name = L"six_btn";
 			this->six_btn->Size = System::Drawing::Size(98, 63);
-			this->six_btn->TabIndex = 1;
+			this->six_btn->TabIndex = 15;
 			this->six_btn->Text = L"6";
 			this->six_btn->UseVisualStyleBackColor = true;
 			this->six_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -354,7 +354,7 @@ namespace Calculator {
 			this->subtract_btn->Location = System::Drawing::Point(314, 376);
 			this->subtract_btn->Name = L"subtract_btn";
 			this->subtract_btn->Size = System::Drawing::Size(98, 63);
-			this->subtract_btn->TabIndex = 1;
+			this->subtract_btn->TabIndex = 16;
 			this->subtract_btn->Text = L"-";
 			this->subtract_btn->UseVisualStyleBackColor = false;
 			this->subtract_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
@@ -366,7 +366,7 @@ namespace Calculator {
 			this->one_btn->Location = System::Drawing::Point(2, 445);
 			this->one_btn->Name = L"one_btn";
 			this->one_btn->Size = System::Drawing::Size(98, 63);
-			this->one_btn->TabIndex = 1;
+			this->one_btn->TabIndex = 17;
 			this->one_btn->Text = L"1";
 			this->one_btn->UseVisualStyleBackColor = true;
 			this->one_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -378,7 +378,7 @@ namespace Calculator {
 			this->two_btn->Location = System::Drawing::Point(106, 445);
 			this->two_btn->Name = L"two_btn";
 			this->two_btn->Size = System::Drawing::Size(98, 63);
-			this->two_btn->TabIndex = 1;
+			this->two_btn->TabIndex = 18;
 			this->two_btn->Text = L"2";
 			this->two_btn->UseVisualStyleBackColor = true;
 			this->two_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -390,7 +390,7 @@ namespace Calculator {
 			this->three_btn->Location = System::Drawing::Point(210, 445);
 			this->three_btn->Name = L"three_btn";
 			this->three_btn->Size = System::Drawing::Size(98, 63);
-			this->three_btn->TabIndex = 1;
+			this->three_btn->TabIndex = 19;
 			this->three_btn->Text = L"3";
 			this->three_btn->UseVisualStyleBackColor = true;
 			this->three_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -404,7 +404,7 @@ namespace Calculator {
 			this->add_btn->Location = System::Drawing::Point(314, 445);
 			this->add_btn->Name = L"add_btn";
 			this->add_btn->Size = System::Drawing::Size(98, 63);
-			this->add_btn->TabIndex = 1;
+			this->add_btn->TabIndex = 20;
 			this->add_btn->Text = L"+";
 			this->add_btn->UseVisualStyleBackColor = false;
 			this->add_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterOperator);
@@ -416,7 +416,7 @@ namespace Calculator {
 			this->pos_neg_btn->Location = System::Drawing::Point(2, 514);
 			this->pos_neg_btn->Name = L"pos_neg_btn";
 			this->pos_neg_btn->Size = System::Drawing::Size(98, 63);
-			this->pos_neg_btn->TabIndex = 1;
+			this->pos_neg_btn->TabIndex = 21;
 			this->pos_neg_btn->Text = L"+/-";
 			this->pos_neg_btn->UseVisualStyleBackColor = true;
 			this->pos_neg_btn->Click += gcnew System::EventHandler(this, &StandardCalc::pos_neg_btn_Click);
@@ -428,7 +428,7 @@ namespace Calculator {
 			this->zero_btn->Location = System::Drawing::Point(106, 514);
 			this->zero_btn->Name = L"zero_btn";
 			this->zero_btn->Size = System::Drawing::Size(98, 63);
-			this->zero_btn->TabIndex = 1;
+			this->zero_btn->TabIndex = 22;
 			this->zero_btn->Text = L"0";
 			this->zero_btn->UseVisualStyleBackColor = true;
 			this->zero_btn->Click += gcnew System::EventHandler(this, &StandardCalc::EnterNumber);
@@ -440,7 +440,7 @@ namespace Calculator {
 			this->decimal_btn->Location = System::Drawing::Point(210, 514);
 			this->decimal_btn->Name = L"decimal_btn";
 			this->decimal_btn->Size = System::Drawing::Size(98, 63);
-			this->decimal_btn->TabIndex = 1;
+			this->decimal_btn->TabIndex = 23;
 			this->decimal_btn->Text = L".";
 			this->decimal_btn->UseVisualStyleBackColor = true;
 			this->decimal_btn->Click += gcnew System::EventHandler(this, &StandardCalc::decimal_btn_Click);
@@ -452,7 +452,7 @@ namespace Calculator {
 			this->equals_btn->Location = System::Drawing::Point(314, 514);
 			this->equals_btn->Name = L"equals_btn";
 			this->equals_btn->Size = System::Drawing::Size(98, 63);
-			this->equals_btn->TabIndex = 1;
+			this->equals_btn->TabIndex = 24;
 			this->equals_btn->Text = L"=";
 			this->equals_btn->UseVisualStyleBackColor = true;
 			this->equals_btn->Click += gcnew System::EventHandler(this, &StandardCalc::equals_btn_Click);
@@ -472,7 +472,7 @@ namespace Calculator {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(417, 582);
+			this->ClientSize = System::Drawing::Size(419, 582);
 			this->Controls->Add(this->StandardLabel);
 			this->Controls->Add(this->equals_btn);
 			this->Controls->Add(this->add_btn);
